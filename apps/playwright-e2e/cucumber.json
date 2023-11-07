@@ -1,0 +1,18 @@
+{
+  "default": {
+    "dryRun": false,
+    "format": [
+      "progress-bar",
+      "html:test-results/cucumber-report.html",
+      "json:test-results/cucumber-report.json",
+      "rerun:@rerun.txt"
+    ],
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "paths": ["features/"],
+    "publishQuiet": true,
+    "require": ["step-definitions/*.ts"],
+    "requireModule": ["tsconfig-paths/register", "ts-node/register"]
+  }
+}

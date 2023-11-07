@@ -28,6 +28,8 @@
     "@angular/cli": "~16.2.0",
     "@angular/compiler-cli": "~16.2.0",
     "@angular/language-service": "~16.2.0",
+    "@cucumber/cucumber": "^10.0.1",
+    "@ngx-playwright/harness": "^0.10.1",
     "@nx/devkit": "17.0.3",
     "@nx/eslint": "17.0.3",
     "@nx/eslint-plugin": "17.0.3",
@@ -54,6 +56,7 @@
     "prettier": "^2.6.2",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "~5.1.3"
   }
 }
