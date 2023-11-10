@@ -40,6 +40,24 @@ nx run-many -t <target1> <target2> -p <proj1> <proj2>
 
 Targets can be defined in the `package.json` or `projects.json`. Learn more [in the docs](https://nx.dev/core-features/run-tasks).
 
+### Reproducing Component Harness Error
+
+- There is currently an error when trying to use functions from the `@ngx-playwright/harness` package. Here is how to reproduce it:
+
+    1. `npm install` to install NPM packages
+    2. `npx playwright install` to install browsers used for Playwright
+    3. `cd apps/playwright-e2e`
+    4. `npx cucumber-js`
+
+- Here is the error that occurs:
+```
+Error: Cucumber expected a CommonJS module at '/Users/vu/Desktop/work/NX16-Playwright/apps/playwright-e2e/step-definitions/test.step.ts' but found an ES module.
+      Either change the file to CommonJS syntax or use the --import directive instead of --require.
+      
+      Original error message: require() of ES Module /Users/vu/Desktop/work/NX16-Playwright/node_modules/@ngx-playwright/harness/index.js from /Users/vu/Desktop/work/NX16-Playwright/apps/playwright-e2e/step-definitions/test.step.ts not supported.
+Instead change the require of index.js in /Users/vu/Desktop/work/NX16-Playwright/apps/playwright-e2e/step-definitions/test.step.ts to a dynamic import() which is available in all CommonJS modules.
+```
+
 ## Want better Editor Integration?
 
 Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provides autocomplete support, a UI for exploring and running tasks & generators, and more! Available for VSCode, IntelliJ and comes with a LSP for Vim users.
