@@ -5,10 +5,10 @@
   "sourceRoot": "apps/playwright-e2e/src",
   "targets": {
     "e2e": {
-      "executor": "@nx/playwright:playwright",
-      "outputs": ["{workspaceRoot}/dist/.playwright/apps/playwright-e2e"],
+      "executor": "nx:run-commands",
       "options": {
-        "config": "apps/playwright-e2e/playwright.config.ts"
+        "command": "cucumber-js",
+        "cwd": "apps/playwright-e2e"
       }
     },
     "lint": {
