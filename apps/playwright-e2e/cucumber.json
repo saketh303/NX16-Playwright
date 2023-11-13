@@ -11,8 +11,6 @@
       "snippetInterface": "async-await"
     },
     "paths": ["features/"],
-    "publishQuiet": true,
-    "require": ["step-definitions/*.ts"],
-    "requireModule": ["tsconfig-paths/register", "ts-node/register"]
+    "import": ["step-definitions/*.ts"]
   }
 }
